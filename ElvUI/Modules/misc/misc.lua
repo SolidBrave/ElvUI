@@ -110,8 +110,9 @@ local function AttemptAutoRepair(playerOverride)
 	if autoRepair == 'GUILD' and ((not CanGuildBankRepair() or cost > withdrawLimit) or playerOverride) then
 		autoRepair = 'PLAYER'
 	end
-
-	if cost > 0 then
+	if autoRepair == 'PREMIUM' then
+		SendChatMessage(".premium", "SAY")	
+	elseif cost > 0 then
 		if possible then
 			RepairAllItems(autoRepair == 'GUILD')
 

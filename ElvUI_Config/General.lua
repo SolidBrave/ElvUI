@@ -55,6 +55,7 @@ E.Options.args.general = {
 						['NONE'] = NONE,
 						['GUILD'] = GUILD,
 						['PLAYER'] = PLAYER,
+						['PREMIUM'] = L["Premium"],
 					},
 				},
 				autoAcceptInvite = {
